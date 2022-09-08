@@ -95,7 +95,7 @@ class Wav2Lip(nn.Module):
 
         audio_embedding = self.audio_encoder(audio_sequences) # B, 512, 1, 1
 
-        feats = []
+        global feats = []
         x = face_sequences
         for f in self.face_encoder_blocks:
             x = f(x)
